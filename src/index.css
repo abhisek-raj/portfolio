@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Playfair Display font class */
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.playfair-display-regular {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-display-medium {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.playfair-display-semibold {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.playfair-display-bold {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.playfair-display-black {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    --background: 240 10% 4%;
+    --foreground: 220 20% 98%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 220 20% 98%;
+
+    --popover: 240 10% 6%;
+    --popover-foreground: 220 20% 98%;
+
+    --primary: 252 100% 58%;
+    --primary-foreground: 220 20% 98%;
+
+    --secondary: 326 100% 70%;
+    --secondary-foreground: 220 20% 98%;
+
+    --accent: 14 100% 57%;
+    --accent-foreground: 220 20% 98%;
+
+    --muted: 240 10% 12%;
+    --muted-foreground: 220 10% 70%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 220 20% 98%;
+
+    --border: 240 10% 15%;
+    --input: 240 10% 15%;
+    --ring: 252 100% 58%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 10% 6%;
+    --sidebar-foreground: 220 20% 98%;
+    --sidebar-primary: 252 100% 58%;
+    --sidebar-primary-foreground: 220 20% 98%;
+    --sidebar-accent: 240 10% 15%;
+    --sidebar-accent-foreground: 220 20% 98%;
+    --sidebar-border: 240 10% 15%;
+    --sidebar-ring: 252 100% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
+}
+
+@layer components {
+  .blur-card {
+    @apply backdrop-blur-md bg-white/5 border border-white/10 rounded-xl transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-[0_0_40px_-5px_hsl(var(--primary))] hover:scale-[1.03] active:scale-[0.97];
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-[0_0_40px_-5px_hsl(var(--secondary))] hover:scale-[1.03] active:scale-[0.97];
+  }
+  
+  .btn-outline {
+    @apply border border-white/30 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full font-medium transition-all duration-300 hover:bg-white/10 hover:border-white/40 active:scale-[0.97];
+  }
+  
+  .glass-card {
+    @apply border border-white/10 bg-white/5 backdrop-blur-md rounded-2xl;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-text-gradient;
+  }
+  
+  .nav-link {
+    @apply relative inline-block py-2 transition-all duration-300 after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full;
+  }
+}
+
+/* Aurora styling */
+.aurora-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Animations */
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.floating {
+  animation: floating 5s ease-in-out infinite;
+}
+
+/* Typing animation */
+.typing-text {
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(30) 1s 1 normal both, 
+             cursor-blink 0.7s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes cursor-blink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: white }
+}
