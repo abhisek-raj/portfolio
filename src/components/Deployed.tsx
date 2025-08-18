@@ -149,31 +149,7 @@ const Deployed = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="glass-card p-8 max-w-2xl mx-auto">
-            <Globe className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-foreground mb-3">
-              Ready to Deploy Your Project?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Let's collaborate on building and deploying cutting-edge applications that make a real impact.
-            </p>
-            <a
-              href="#contact"
-              className="btn-primary inline-flex items-center gap-2"
-            >
-              Get Started
-              <ExternalLink className="h-4 w-4" />
-            </a>
-          </div>
-        </motion.div>
+        {/* Call to Action section removed */}
       </div>
     </section>
   );

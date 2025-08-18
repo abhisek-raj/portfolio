@@ -1,89 +1,108 @@
 import { motion } from 'framer-motion';
-import { Code, Database, Brain, Cpu, Zap, Globe, Server, Cloud } from 'lucide-react';
+import { Code, Database, Brain, Cpu, Zap, Globe, Server, Cloud, BarChart2 } from 'lucide-react';
 
 const TechnicalSkills = () => {
   const skillCategories = [
     {
-      title: 'Programming Languages',
-      icon: <Code className="h-8 w-8 text-primary" />,
-      skills: [
-        'Java', 'Python', 'JavaScript', 'TypeScript', 'C++', 'R', 'Julia'
-      ],
-      description: 'Core programming languages for development and data science'
-    },
-    {
-      title: 'Machine Learning & AI',
-      icon: <Brain className="h-8 w-8 text-primary" />,
-      skills: [
-        'TensorFlow', 'PyTorch', 'Scikit-Learn', 'Keras', 'OpenCV', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'
-      ],
-      description: 'Advanced ML frameworks and data manipulation libraries'
-    },
-    {
-      title: 'Natural Language Processing',
-      icon: <Cpu className="h-8 w-8 text-primary" />,
-      skills: [
-        'NLTK', 'spaCy', 'Transformers', 'Hugging Face', 'BERT', 'GPT', 'Word2Vec', 'GloVe', 'SpaCy'
-      ],
-      description: 'NLP libraries and pre-trained models for text processing'
-    },
-    {
       title: 'Web Development',
-      icon: <Globe className="h-8 w-8 text-primary" />,
+      icon: <Globe className="h-6 w-6 text-primary" />,
       skills: [
-        'React', 'Next.js', 'Node.js', 'Express.js', 'Flask', 'Django', 'HTML5', 'CSS3', 'Tailwind CSS'
-      ],
-      description: 'Full-stack development frameworks and technologies'
+        
+        { name: 'PYTHON', level: 75 },
+        { name: 'Streamlit', level: 75 },
+        { name: 'HTML/CSS', level: 90 },
+        { name: 'JavaScript', level: 85 },
+        
+        { name: 'Node.js', level: 75 },
+        
+      ]
     },
     {
-      title: 'Databases & Cloud',
-      icon: <Database className="h-8 w-8 text-primary" />,
+      title: 'Programming',
+      icon: <Code className="h-6 w-6 text-primary" />,
       skills: [
-        'MongoDB', 'PostgreSQL', 'MySQL', 'Redis', 'AWS', 'Google Cloud', 'Azure', 'Docker', 'Kubernetes'
-      ],
-      description: 'Database systems and cloud infrastructure'
+        { name: 'Python', level: 90 },
+        { name: 'Java with DSA', level: 85 },
+        { name: 'Java', level: 70 },
+        
+      ]
     },
     {
-      title: 'Development Tools',
-      icon: <Zap className="h-8 w-8 text-primary" />,
+      title: 'Machine Learning',
+      icon: <Brain className="h-6 w-6 text-primary" />,
       skills: [
-        'VS Code', 'PyCharm', 'Jupyter Notebook', 'Google Colab', 'Git', 'GitHub', 'Postman', 'Docker Desktop'
-      ],
-      description: 'Essential tools for development and collaboration'
+        { name: 'NLP', level: 85 },
+        { name: 'Computer Vision', level: 85 },
+        { name: 'TensorFlow', level: 85 },
+        { name: 'PyTorch', level: 80 },
+        { name: 'Scikit-Learn', level: 85 },
+        { name: 'Pandas', level: 90 },
+        { name: 'NumPy', level: 90 },
+        { name: 'keras', level: 90 },
+
+      ]
     },
     {
-      title: 'Data Analysis & Visualization',
-      icon: <Server className="h-8 w-8 text-primary" />,
+      title: 'Cloud & DevOps',
+      icon: <Cloud className="h-6 w-6 text-primary" />,
       skills: [
-        'Power BI', 'Tableau', 'Plotly', 'Bokeh', 'Jupyter', 'Anaconda', 'Apache Spark', 'Hadoop'
-      ],
-      description: 'Data visualization and big data processing tools'
+        { name: 'AWS', level: 80 },
+        { name: 'Docker', level: 85 },
+  
+        { name: 'GitLab CI/CD', level: 80 },
+       
+      ]
     },
     {
-      title: 'Additional ML/NLP Tools',
-      icon: <Cloud className="h-8 w-8 text-primary" />,
+      title: 'Databases',
+      icon: <Database className="h-6 w-6 text-primary" />,
       skills: [
-        'Weights & Biases', 'MLflow', 'Kubeflow', 'FastAPI', 'Streamlit', 'Gradio', 'LangChain', 'ChromaDB'
-      ],
-      description: 'Advanced tools for ML model management and deployment'
+        { name: 'MongoDB', level: 85 },
+        { name: 'PostgreSQL', level: 80 },
+        { name: 'MySQL', level: 80 },
+       
+      ]
+    },
+    {
+      title: 'Data Analyst',
+      icon: <BarChart2 className="h-6 w-6 text-primary" />,
+      skills: [
+        { name: 'SQL', level: 85 },
+        { name: 'Power BI', level: 80 },
+        
+        { name: 'Excel', level: 90 },
+        { name: 'Pandas', level: 90 },
+        { name: 'NumPy', level: 85 },
+        { name: 'Data Visualization', level: 85 },
+        { name: 'Data Cleaning', level: 90 },
+        { name: 'Statistical Analysis', level: 80 },
+        { name: 'Google Analytics', level: 75 }
+      ]
+    },
+    {
+      title: 'Tools & Others',
+      icon: <Zap className="h-6 w-6 text-primary" />,
+      skills: [
+        { name: 'VS Code', level: 90 },
+        { name: 'Git', level: 90 },
+        { name: 'GitHub', level: 90 },
+        { name: 'GitLab', level: 85 },
+        { name: 'Hugging Face', level: 85 },
+        { name: 'Google Colab', level: 90 },
+        { name: 'Anaconda', level: 85 },
+        { name: 'Jupyter', level: 85 },
+        { name: 'Docker', level: 85 }
+      ]
     }
   ];
 
-  const proficiencyLevels = [
-    { level: 'Expert', color: 'bg-green-500/20 text-green-400', skills: ['Python', 'TensorFlow', 'PyTorch', 'Git'] },
-    { level: 'Advanced', color: 'bg-blue-500/20 text-blue-400', skills: ['JavaScript', 'React', 'MongoDB', 'Scikit-Learn'] },
-    { level: 'Intermediate', color: 'bg-yellow-500/20 text-yellow-400', skills: ['Java', 'Node.js', 'Docker', 'Power BI'] },
-    { level: 'Learning', color: 'bg-purple-500/20 text-purple-400', skills: ['Kubernetes', 'LangChain', 'FastAPI'] }
-  ];
-
   return (
-    <section id="technical-skills" className="py-20 relative">
-      <div className="container mx-auto px-6">
-        {/* Section Header */}
+    <section id="technical-skills" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
@@ -91,125 +110,43 @@ const TechnicalSkills = () => {
             Technical Skills
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Comprehensive technical expertise spanning machine learning, NLP, web development, and data science
+            Here are the technologies I work with
           </p>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-6"></div>
         </motion.div>
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="glass-card p-6 hover:shadow-2xl transition-all duration-300 group"
+              className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-all duration-300 group"
             >
-              <div className="flex items-center gap-3 mb-4">
-                {category.icon}
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 bg-primary/10 rounded-lg">
+                  {category.icon}
+                </div>
+                <h3 className="text-xl font-bold text-foreground">
                   {category.title}
                 </h3>
               </div>
               
-              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                {category.description}
-              </p>
-
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
                   <span 
-                    key={skillIndex} 
-                    className="px-3 py-1 text-xs bg-primary/10 text-primary rounded-full border border-primary/20 hover:bg-primary/20 transition-colors duration-200"
+                    key={skillIndex}
+                    className="px-3 py-1.5 text-sm rounded-md bg-muted text-foreground border border-border hover:bg-primary/10 transition-colors"
                   >
-                    {skill}
+                    {skill.name}
                   </span>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* Proficiency Levels */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
-        >
-          <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
-            Skill Proficiency Levels
-          </h3>
-          
-          <div className="space-y-6">
-            {proficiencyLevels.map((level, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="glass-card p-6"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${level.color}`}>
-                    {level.level}
-                  </span>
-                  <span className="text-sm text-muted-foreground">
-                    {level.skills.length} skills
-                  </span>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
-                  {level.skills.map((skill, skillIndex) => (
-                    <span 
-                      key={skillIndex} 
-                      className="px-2 py-1 text-xs bg-background/50 text-foreground rounded border border-white/10"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Additional Skills Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="glass-card p-8 max-w-2xl mx-auto">
-            <Brain className="h-12 w-12 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-foreground mb-3">
-              Continuously Learning & Growing
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Always exploring new technologies and frameworks to stay at the forefront of AI/ML development
-            </p>
-            <div className="flex flex-wrap justify-center gap-2">
-              <span className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-primary/20">
-                MLOps
-              </span>
-              <span className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-primary/20">
-                AutoML
-              </span>
-              <span className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-primary/20">
-                Edge AI
-              </span>
-              <span className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-primary/20">
-                Federated Learning
-              </span>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

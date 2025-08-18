@@ -4,17 +4,17 @@ import { Calendar, MapPin, ExternalLink, Github } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Machine Learning Research Intern',
+      title: 'Artificial Intelligence Machine Learning Intern-3months',
       company: 'Finessefleet Foundation',
-      department: 'Dept. of Electrical Engineering & Computer Sciences',
       period: 'June 2025 -- August 2025',
       achievements: [
-        'Trained models for code-mixed Indian languages in LinguaBridge using CNN-LSTM.',
-        'Developed translation pipelines using IndicNLP and conducted data curation.',
-        'Project Link: https://github.com/finessefleet/linguabridge/tree/Abhisek'
+        'Developed a Python-based Streamlit website',
+        'Trained models for code-mixed Indian languages in LinguaBridge using CNN-LSTM',
+        'Developed translation pipelines using IndicNLP and conducted data curation'
       ],
       projectLink: 'https://github.com/finessefleet/linguabridge/tree/Abhisek',
-      companyLink: 'https://www.linkedin.com/company/finessefleet/posts/?feedView=all'
+      companyLink: 'https://www.linkedin.com/company/finessefleet/'
+     
     },
     {
       title: 'AI/ML Intern',
@@ -23,7 +23,8 @@ const Experience = () => {
       period: 'July 2024 -- August 2024',
       achievements: [
         'Trained in Python, Machine Learning, NLP, and Computer Vision.',
-        'Developed face recognition and attendance systems using Keras and OpenCV.'
+        'Developed face recognition and attendance systems and created machine learning models.',
+        'train and testing of models',
       ]
     }
   ];

@@ -65,8 +65,8 @@ const Index = () => {
         <div className="md:pl-16 pb-24 md:pb-0">
           <Hero />
           <BioSection />
-          <TechnicalSkills />
           <Experience />
+          <TechnicalSkills />
           <Deployed />
           <Projects />
           <MLModel />
