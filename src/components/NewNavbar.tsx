@@ -50,12 +50,12 @@ const NewNavbar = () => {
                   href={button.href}
                   className={`nav-link font-medium text-sm px-4 py-2 rounded-lg transition-all duration-300 ${
                     button.label === 'Deployed'
-                      ? 'bg-gradient-to-r from-black/20 to-gray-800/20 border border-black/40 text-black hover:bg-gradient-to-r hover:from-black/30 hover:to-gray-800/30 hover:border-black/60 hover:scale-105 shadow-lg shadow-black/20'
+                      ? 'bg-yellow-400 text-black border border-yellow-500 hover:bg-yellow-300 hover:border-yellow-400 hover:scale-105 shadow-lg shadow-yellow-400/30'
                       : 'hover:bg-white/5'
                   }`}
                 >
                                                         {button.label === 'Deployed' && (
-                     <span className="inline-block w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                     <span className="inline-block w-2 h-2 bg-yellow-600 rounded-full mr-2 animate-pulse"></span>
                    )}
                   {button.label}
                 </a>
