@@ -5,7 +5,7 @@ import VariableProximity from './VariableProximity';
 import ScrollReveal from './ui/scroll-reveal';
 
 // Resume file path
-const RESUME_PATH = '/resume/resume (10).pdf';
+const RESUME_PATH = '/resume/resume.pdf';
 const RESUME_FILENAME = 'AbhisekRaj_Resume.pdf';
 
 const handleResumeDownload = () => {
